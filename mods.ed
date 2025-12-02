@@ -25,3 +25,15 @@ e stm32-rs/devices/patches/usart/f4_add_UART_GTPR.yaml
 /^  GTPR/
 +3,+5 s/size: 16/#size: 16/
 w
+
+# stm32g071: IWDG, SPI1: remove 16-bit constraints
+#
+e stm32-rs/devices/stm32g071.yaml
+/^IWDG/
++2 s/"KR/#"KR/
++1 s/size: 16/#size: 16/
+
+/^SPI1/
++6 s/"CR1/#"CR1/
++1 s/size: 16/#size: 16/
+w

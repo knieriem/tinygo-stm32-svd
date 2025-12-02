@@ -34,7 +34,7 @@
           <displayName>KR</displayName>
           <description>Key register</description>
           <addressOffset>0x0</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>write-only</access>
           <resetValue>0x00000000</resetValue>
           <fields>
@@ -70,7 +70,7 @@
           <displayName>PR</displayName>
           <description>Prescaler register</description>
           <addressOffset>0x4</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
           <fields>
@@ -125,7 +125,7 @@
           <displayName>RLR</displayName>
           <description>Reload register</description>
           <addressOffset>0x8</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000FFF</resetValue>
           <fields>
@@ -149,7 +149,7 @@
           <displayName>SR</displayName>
           <description>Status register</description>
           <addressOffset>0xC</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
           <fields>
@@ -181,7 +181,7 @@
           <displayName>WINR</displayName>
           <description>Window register</description>
           <addressOffset>0x10</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000FFF</resetValue>
           <fields>
@@ -15331,7 +15331,7 @@ Others: Reserved</description>
           <displayName>CR1</displayName>
           <description>control register 1</description>
           <addressOffset>0x0</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
           <fields>
@@ -15641,7 +15641,7 @@ Others: Reserved</description>
           <displayName>CR2</displayName>
           <description>control register 2</description>
           <addressOffset>0x4</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
           <fields>
@@ -15939,7 +15939,7 @@ Others: Reserved</description>
           <displayName>SR</displayName>
           <description>status register</description>
           <addressOffset>0x8</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <resetValue>0x00000002</resetValue>
           <fields>
             <field>
@@ -16200,7 +16200,7 @@ Others: Reserved</description>
           <displayName>DR</displayName>
           <description>data register</description>
           <addressOffset>0xC</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
           <fields>
@@ -16245,7 +16245,7 @@ Others: Reserved</description>
           <displayName>CRCPR</displayName>
           <description>CRC polynomial register</description>
           <addressOffset>0x10</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000007</resetValue>
           <fields>
@@ -16268,7 +16268,7 @@ Others: Reserved</description>
           <displayName>RXCRCR</displayName>
           <description>RX CRC register</description>
           <addressOffset>0x14</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
           <fields>
@@ -16291,7 +16291,7 @@ Others: Reserved</description>
           <displayName>TXCRCR</displayName>
           <description>TX CRC register</description>
           <addressOffset>0x18</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
           <fields>
@@ -16314,7 +16314,7 @@ Others: Reserved</description>
           <displayName>I2SCFGR</displayName>
           <description>configuration register</description>
           <addressOffset>0x1C</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
           <fields>
@@ -16505,7 +16505,7 @@ Others: Reserved</description>
           <displayName>I2SPR</displayName>
           <description>prescaler register</description>
           <addressOffset>0x20</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
           <fields>
