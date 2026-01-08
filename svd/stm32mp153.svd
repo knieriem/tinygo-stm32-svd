@@ -1,8 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+Copyright (c) 2024 STMicroelectronics.
+
+ SPDX-License-Identifier: Apache-2.0
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
 <device xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.1" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
-  <name>STM32MP153</name>
-  <version>1.3</version>
+  <name>STM32MP153x</name>
+  <version>1.4</version>
   <description>STM32MP153x</description>
-  <cpu><name>CM4</name><revision>r0p1</revision><endian>little</endian><mpuPresent>false</mpuPresent><fpuPresent>true</fpuPresent><nvicPrioBits>4</nvicPrioBits><vendorSystickConfig>false</vendorSystickConfig></cpu>
   <addressUnitBits>8</addressUnitBits>
   <width>32</width>
   <size>0x20</size>
@@ -13,7 +30,7 @@
       <name>ADC</name>
       <description>ADC</description>
       <groupName>ADC</groupName>
-	  <disableCondition>RCC-&gt;RCC_MP_AHB2ENSETR-&gt;ADC12EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MP_AHB2ENSETR->ADC12EN == 0</disableCondition>
       <baseAddress>0x48003000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -1361,7 +1378,7 @@
       <name>ADC2</name>
       <description>ADC2</description>
       <groupName>ADC2</groupName>
-	  <disableCondition>RCC-&gt;RCC_MP_AHB2ENSETR-&gt;ADC12EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MP_AHB2ENSETR->ADC12EN == 0</disableCondition>
       <baseAddress>0x48003100</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -4159,7 +4176,7 @@
       <name>BSEC</name>
       <description>BSEC2</description>
       <groupName>BSEC2</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB5ENSETR-&gt;BSECEN == 0</disableCondition> 
+	  <disableCondition>RCC->RCC_MC_APB5ENSETR->BSECEN == 0</disableCondition> 
       <baseAddress>0x5C005000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -6694,7 +6711,7 @@
       <name>CRC1</name>
       <description>CRC1</description>
       <groupName>CRC1</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB6ENSETR-&gt;CRC1EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB6ENSETR->CRC1EN == 0</disableCondition>
       <baseAddress>0x58009000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -6809,14 +6826,14 @@
     </peripheral>
 	<peripheral derivedFrom="CRC1">
       <name>CRC2</name>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB3ENSETR-&gt;CRC2EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB3ENSETR->CRC2EN == 0</disableCondition>
       <baseAddress>0x4C004000</baseAddress>
     </peripheral>
 	<peripheral>
       <name>CRYP1</name>
       <description>CRYP1</description>
       <groupName>CRYP1</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB5ENSETR-&gt;CRYP1EN == 0</disableCondition> 
+	  <disableCondition>RCC->RCC_MC_AHB5ENSETR->CRYP1EN == 0</disableCondition> 
       <baseAddress>0x54001000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -8379,7 +8396,7 @@
     </peripheral>
     <peripheral derivedFrom="CRYP1">
       <name>CRYP2</name>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB3ENSETR-&gt;CRYP2EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB3ENSETR->CRYP2EN == 0</disableCondition>
       <baseAddress>0x4C005000</baseAddress>
 	  <interrupt>
         <name>CRYP2</name>
@@ -8391,7 +8408,7 @@
       <name>DAC1</name>
       <description>DAC1</description>
       <groupName>DAC1</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;DAC12EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->DAC12EN == 0</disableCondition>
       <baseAddress>0x40017000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -9063,7 +9080,7 @@
       <name>DCMI</name>
       <description>DCMI</description>
       <groupName>DCMI</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB3ENSETR-&gt;DCMIEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB3ENSETR->DCMIEN == 0</disableCondition>
       <baseAddress>0x4C006000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -12105,7 +12122,7 @@
       <name>DDRPERFM</name>
       <description>DDRPERFM</description>
       <groupName>DDRPERFM</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB4ENSETR-&gt;DDRPERFMEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB4ENSETR->DDRPERFMEN == 0</disableCondition>
       <baseAddress>0x5A007000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -12432,7 +12449,7 @@
       <name>DDRPHYC</name>
       <description>DDRPHYC</description>
       <groupName>DDRPHYC</groupName>
-	  <disableCondition>RCC-&gt;RCC_DDRITFCR-&gt;DDRPHYCEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_DDRITFCR->DDRPHYCEN == 0</disableCondition>
       <baseAddress>0x5A004000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -15356,7 +15373,7 @@
       <name>DFSDM1</name>
       <description>DFSDM1</description>
       <groupName>DFSDM1</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB2ENSETR-&gt;DFSDMEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB2ENSETR->DFSDMEN == 0</disableCondition>
       <baseAddress>0x4400D000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -20239,7 +20256,7 @@
       <name>DLYBSD1</name>
       <description>DLYBSD1</description>
       <groupName>DLYBSD1</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB6ENSETR-&gt;SDMMC1EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB6ENSETR->SDMMC1EN == 0</disableCondition>
       <baseAddress>0x58006000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -20369,19 +20386,19 @@
     </peripheral>
     <peripheral derivedFrom="DLYBSD1">
       <name>DLYBSD2</name>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB6ENSETR-&gt;SDMMC2EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB6ENSETR->SDMMC2EN == 0</disableCondition>
       <baseAddress>0x58008000</baseAddress>
     </peripheral>
 	<peripheral derivedFrom="DLYBSD1">
       <name>DLYBSD3</name>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB2ENSETR-&gt;SDMMC3EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB2ENSETR->SDMMC3EN == 0</disableCondition>
       <baseAddress>0x48005000</baseAddress>
     </peripheral>   
     <peripheral>
       <name>DMA1</name>
       <description>DMA1</description>
       <groupName>DMA1</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB2ENSETR-&gt;DMA1EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB2ENSETR->DMA1EN == 0</disableCondition>
       <baseAddress>0x48000000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -22902,7 +22919,7 @@
     </peripheral>
 	<peripheral derivedFrom="DMA1">
       <name>DMA2</name>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB2ENSETR-&gt;DMA2EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB2ENSETR->DMA2EN == 0</disableCondition>
       <baseAddress>0x48001000</baseAddress>
 	  <interrupt>
         <name>DMA2_STR0</name>
@@ -22949,7 +22966,7 @@
       <name>DMAMUX1</name>
       <description>DMAMUX1</description>
       <groupName>DMAMUX1</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB2ENSETR-&gt;DMAMUXEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB2ENSETR->DMAMUXEN == 0</disableCondition>
       <baseAddress>0x48002000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -24585,7 +24602,7 @@
       <name>DTS</name>
       <description>DTS register block</description>
       <groupName>DTS</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB3ENSETR-&gt;DTSEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB3ENSETR->DTSEN == 0</disableCondition>
       <baseAddress>0x50028000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -25087,7 +25104,7 @@
       <name>ETH_MAC_MMC</name>
       <description>ETH_MAC_MMC</description>
       <groupName>Ethernet</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB6ENSETR-&gt;ETHCKEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB6ENSETR->ETHCKEN == 0</disableCondition>
       <baseAddress>0x5800A000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -29033,7 +29050,7 @@
       <name>ETH_MTL</name>
       <description>ETH_MTL</description>
       <groupName>Ethernet</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB6ENSETR-&gt;ETHCKEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB6ENSETR->ETHCKEN == 0</disableCondition>
       <baseAddress>0x5800AC00</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -30001,7 +30018,7 @@
       <name>ETH_DMA</name>
       <description>ETH_DMA</description>
       <groupName>Ethernet</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB6ENSETR-&gt;ETHCKEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB6ENSETR->ETHCKEN == 0</disableCondition>
       <baseAddress>0x5800B000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -31352,7 +31369,7 @@
       <name>ETZPC</name>
       <description>ETZPC</description>
       <groupName>ETZPC</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB5ENSETR-&gt;TZPCEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB5ENSETR->TZPCEN == 0</disableCondition>
       <baseAddress>0x5C007000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -35565,7 +35582,7 @@
       <name>FDCAN1</name>
       <description>FDCAN1</description>
       <groupName>FDCAN1</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB2ENSETR-&gt;FDCANEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB2ENSETR->FDCANEN == 0</disableCondition>
       <baseAddress>0x4400E000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -38699,7 +38716,7 @@
     </peripheral>
 	<peripheral derivedFrom="FDCAN1">
       <name>FDCAN2</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB2ENSETR-&gt;FDCANEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB2ENSETR->FDCANEN == 0</disableCondition>
       <baseAddress>0x4400F000</baseAddress>
 	  <interrupt>
         <name>FDCAN2_IT0</name>
@@ -38716,7 +38733,7 @@
       <name>FMC</name>
       <description>FMC register block</description>
       <groupName>FMC</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB6ENSETR-&gt;FMCEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB6ENSETR->FMCEN == 0</disableCondition>
       <baseAddress>0x58002000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -50750,7 +50767,7 @@
       <name>GPIOA</name>
       <description>GPIOA</description>
       <groupName>GPIOA</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB4ENSETR-&gt;GPIOAEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB4ENSETR->GPIOAEN == 0</disableCondition>
       <baseAddress>0x50002000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -52311,7 +52328,7 @@
       <name>GPIOB</name>
       <description>GPIOB</description>
       <groupName>GPIOB</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB4ENSETR-&gt;GPIOBEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB4ENSETR->GPIOBEN == 0</disableCondition>
       <baseAddress>0x50003000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -53872,7 +53889,7 @@
       <name>GPIOC</name>
       <description>GPIOC</description>
       <groupName>GPIOC</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB4ENSETR-&gt;GPIOCEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB4ENSETR->GPIOCEN == 0</disableCondition>
       <baseAddress>0x50004000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -55433,7 +55450,7 @@
       <name>GPIOD</name>
       <description>GPIOD</description>
       <groupName>GPIOD</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB4ENSETR-&gt;GPIODEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB4ENSETR->GPIODEN == 0</disableCondition>
       <baseAddress>0x50005000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -56994,7 +57011,7 @@
       <name>GPIOE</name>
       <description>GPIOE</description>
       <groupName>GPIOE</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB4ENSETR-&gt;GPIOEEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB4ENSETR->GPIOEEN == 0</disableCondition>
       <baseAddress>0x50006000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -58555,7 +58572,7 @@
       <name>GPIOF</name>
       <description>GPIOF</description>
       <groupName>GPIOF</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB4ENSETR-&gt;GPIOFEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB4ENSETR->GPIOFEN == 0</disableCondition>
       <baseAddress>0x50007000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -60116,7 +60133,7 @@
       <name>GPIOG</name>
       <description>GPIOG</description>
       <groupName>GPIOG</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB4ENSETR-&gt;GPIOGEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB4ENSETR->GPIOGEN == 0</disableCondition>
       <baseAddress>0x50008000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -61677,7 +61694,7 @@
       <name>GPIOH</name>
       <description>GPIOH</description>
       <groupName>GPIOH</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB4ENSETR-&gt;GPIOHEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB4ENSETR->GPIOHEN == 0</disableCondition>
       <baseAddress>0x50009000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -63238,7 +63255,7 @@
       <name>GPIOI</name>
       <description>GPIOI</description>
       <groupName>GPIOI</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB4ENSETR-&gt;GPIOIEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB4ENSETR->GPIOIEN == 0</disableCondition>
       <baseAddress>0x5000A000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -64799,7 +64816,7 @@
       <name>GPIOJ</name>
       <description>GPIOJ</description>
       <groupName>GPIOJ</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB4ENSETR-&gt;GPIOJEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB4ENSETR->GPIOJEN == 0</disableCondition>
       <baseAddress>0x5000B000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -66360,7 +66377,7 @@
       <name>GPIOK</name>
       <description>GPIOK</description>
       <groupName>GPIOK</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB4ENSETR-&gt;GPIOKEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB4ENSETR->GPIOKEN == 0</disableCondition>
       <baseAddress>0x5000C000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -67921,7 +67938,7 @@
       <name>GPIOZ</name>
       <description>GPIOZ</description>
       <groupName>GPIOZ</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB5ENSETR-&gt;GPIOZEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB5ENSETR->GPIOZEN == 0</disableCondition>
       <baseAddress>0x54004000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -69541,7 +69558,7 @@
       <name>HASH1</name>
       <description>HASH register block</description>
       <groupName>HASH</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB5ENSETR-&gt;HASH1EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB5ENSETR->HASH1EN == 0</disableCondition>
       <baseAddress>0x54002000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -70871,7 +70888,7 @@
       <name>HASH2</name>
       <description>HASH register block</description>
       <groupName>HASH</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB3ENSETR-&gt;HASH2EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB3ENSETR->HASH2EN == 0</disableCondition>
       <baseAddress>0x4C002000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -72201,7 +72218,7 @@
       <name>HDMI_CEC</name>
       <description>HDMI_CEC</description>
       <groupName>HDMI_CEC</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;CECEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->CECEN == 0</disableCondition>
       <baseAddress>0x40016000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -72567,7 +72584,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>HDP</name>
       <description>HDP</description>
       <groupName>HDP</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB3ENSETR-&gt;HDPEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB3ENSETR->HDPEN == 0</disableCondition>
       <baseAddress>0x5002A000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -72782,7 +72799,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>HSEM</name>
       <description>HSEM</description>
       <groupName>HSEM_IPXACT</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB3ENSETR-&gt;HSEMEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB3ENSETR->HSEMEN == 0</disableCondition>
       <baseAddress>0x4C000000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -74948,7 +74965,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>I2C1</name>
       <description>I2C1</description>
       <groupName>I2C2_IPXACT</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;I2C1EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->I2C1EN == 0</disableCondition>
       <baseAddress>0x40012000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -75649,7 +75666,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>
     <peripheral derivedFrom="I2C1">
       <name>I2C2</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;I2C2EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->I2C2EN == 0</disableCondition>
       <baseAddress>0x40013000</baseAddress>
       <interrupt>
         <name>I2C2_EVT</name>
@@ -75664,7 +75681,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>
     <peripheral derivedFrom="I2C1">
       <name>I2C3</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;I2C3EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->I2C3EN == 0</disableCondition>
       <baseAddress>0x40014000</baseAddress>
 	  <interrupt>
         <name>I2C3_EVT</name>
@@ -75679,7 +75696,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>
     <peripheral derivedFrom="I2C1">
       <name>I2C4</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB5ENSETR-&gt;I2C4EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB5ENSETR->I2C4EN == 0</disableCondition>
       <baseAddress>0x5C002000</baseAddress>
 	  <interrupt>
         <name>I2C4_EVT</name>
@@ -75694,7 +75711,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>
     <peripheral derivedFrom="I2C1">
       <name>I2C5</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;I2C5EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->I2C5EN == 0</disableCondition>
       <baseAddress>0x40015000</baseAddress>
 	  <interrupt>
         <name>I2C5_EVT</name>
@@ -75709,7 +75726,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>
     <peripheral derivedFrom="I2C1">
       <name>I2C6</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB5ENSETR-&gt;I2C6EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB5ENSETR->I2C6EN == 0</disableCondition>
       <baseAddress>0x5C009000</baseAddress>
 	  <interrupt>
         <name>I2C6_EVT</name>
@@ -75726,7 +75743,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
 			<name>IPCC</name>
 			<description>IPCC</description>
 			<groupName>IPCC</groupName>
-			<disableCondition>RCC-&gt;RCC_MC_AHB3ENSETR-&gt;IPCCEN == 0</disableCondition>
+			<disableCondition>RCC->RCC_MC_AHB3ENSETR->IPCCEN == 0</disableCondition>
 			<baseAddress>0x4C001000</baseAddress>
 			<addressBlock>
 				<offset>0x0</offset>
@@ -76139,6 +76156,35 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
           </fields>
         </register>
         <register>
+          <name>IWDG_EWCR</name>
+          <displayName>IWDG_EWCR</displayName>
+          <description>IWDG early wake-up interrupt register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>EWIT</name>
+              <description>EWIT</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>12</bitWidth>
+            </field>
+            <field>
+              <name>EWIC</name>
+              <description>EWIC</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EWIE</name>
+              <description>EWIE</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
           <name>IWDG_VERR</name>
           <displayName>IWDG_VERR</displayName>
           <description>IWDG version register</description>
@@ -76210,7 +76256,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>LPTIM1</name>
       <description>LPTIM1</description>
       <groupName>LPTIM1</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;LPTIM1EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->LPTIM1EN == 0</disableCondition>
       <baseAddress>0x40009000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -76682,7 +76728,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>		
     <peripheral derivedFrom="LPTIM1">
       <name>LPTIM2</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB3ENSETR-&gt;LPTIM2EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB3ENSETR->LPTIM2EN == 0</disableCondition>
       <baseAddress>0x50021000</baseAddress>
 	  <interrupt>
         <name>LPTIM2</name>
@@ -76692,7 +76738,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>
 	<peripheral derivedFrom="LPTIM1">
       <name>LPTIM3</name>      
-	  <disableCondition>RCC-&gt;RCC_MC_APB3ENSETR-&gt;LPTIM3EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB3ENSETR->LPTIM3EN == 0</disableCondition>
       <baseAddress>0x50022000</baseAddress>    
       <interrupt>
        <name>LPTIM3</name>
@@ -76702,7 +76748,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>
     <peripheral derivedFrom="LPTIM1">
       <name>LPTIM4</name>      
-	  <disableCondition>RCC-&gt;RCC_MC_APB3ENSETR-&gt;LPTIM4EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB3ENSETR->LPTIM4EN == 0</disableCondition>
       <baseAddress>0x50023000</baseAddress>
       <interrupt>
         <name>LPTIM4</name>
@@ -76712,7 +76758,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>
     <peripheral derivedFrom="LPTIM1">
       <name>LPTIM5</name>     
-	  <disableCondition>RCC-&gt;RCC_MC_APB3ENSETR-&gt;LPTIM5EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB3ENSETR->LPTIM5EN == 0</disableCondition>
       <baseAddress>0x50024000</baseAddress> 
       <interrupt>
         <name>LPTIM5</name>
@@ -76724,7 +76770,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>LTDC</name>
       <description>LTDC</description>
       <groupName>LTDC</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB4ENSETR-&gt;LTDCEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB4ENSETR->LTDCEN == 0</disableCondition>
       <baseAddress>0x5A001000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -77921,7 +77967,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>MDIOS</name>
       <description>MDIOS</description>
       <groupName>MDIOS</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;MDIOSEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->MDIOSEN == 0</disableCondition>
       <baseAddress>0x4001C000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -79363,7 +79409,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>MDMA</name>
       <description>MDMA1</description>
       <groupName>MDMA1</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB6ENSETR-&gt;MDMAEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB6ENSETR->MDMAEN == 0</disableCondition>
       <baseAddress>0x58000000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -110296,7 +110342,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>QUADSPI</name>
       <description>QUADSPI1</description>
       <groupName>QUADSPI1</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB6ENSETR-&gt;QSPIEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB6ENSETR->QSPIEN == 0</disableCondition>
       <baseAddress>0x58003000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -121963,7 +122009,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>RNG1</name>
       <description>RNG1</description>
       <groupName>RNG1</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_AHB5ENSETR-&gt;RNG1EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB5ENSETR->RNG1EN == 0</disableCondition>
       <baseAddress>0x54003000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -122137,7 +122183,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>
 	<peripheral derivedFrom="RNG1">
       <name>RNG2</name>      
-	  <disableCondition>RCC-&gt;RCC_MC_AHB3ENSETR-&gt;RNG2EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_AHB3ENSETR->RNG2EN == 0</disableCondition>
       <baseAddress>0x4C003000</baseAddress>
 	  <interrupt>
         <name>RNG2</name>
@@ -122149,7 +122195,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>RTC</name>
       <description>RTC</description>
       <groupName>RTC</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB5ENSETR-&gt;RTCAPBEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB5ENSETR->RTCAPBEN == 0</disableCondition>
       <baseAddress>0x5C004000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -123401,7 +123447,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>SAI1</name>
       <description>SAI1 register block</description>
       <groupName>SAI</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB2ENSETR-&gt;SAI1EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB2ENSETR->SAI1EN == 0</disableCondition>
       <baseAddress>0x4400A000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -124467,7 +124513,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>
     <peripheral derivedFrom="SAI1">
       <name>SAI2</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB2ENSETR-&gt;SAI2EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB2ENSETR->SAI2EN == 0</disableCondition>
       <baseAddress>0x4400B000</baseAddress>
 	  <interrupt>
         <name>SAI2</name>
@@ -124477,7 +124523,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>
     <peripheral derivedFrom="SAI1">
       <name>SAI3</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB2ENSETR-&gt;SAI3EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB2ENSETR->SAI3EN == 0</disableCondition>
       <baseAddress>0x4400C000</baseAddress>
 	  <interrupt>
         <name>SAI3</name>
@@ -124487,7 +124533,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>
     <peripheral derivedFrom="SAI1">
       <name>SAI4</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB3ENSETR-&gt;SAI4EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB3ENSETR->SAI4EN == 0</disableCondition>
       <baseAddress>0x50027000</baseAddress>
 	  <interrupt>
         <name>SAI4</name>
@@ -125850,7 +125896,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>SPDIFRX</name>
       <description>SPDIFRX</description>
       <groupName>SPDIFRX</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;SPDIFEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->SPDIFEN == 0</disableCondition>
       <baseAddress>0x4000D000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -126336,7 +126382,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>SPI1</name>
       <description>SPI1</description>
       <groupName>SPI1</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB2ENSETR-&gt;SPI1EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB2ENSETR->SPI1EN == 0</disableCondition>
       <baseAddress>0x44004000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -127154,7 +127200,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>
     <peripheral derivedFrom="SPI1">
       <name>SPI2</name>     
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;SPI2EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->SPI2EN == 0</disableCondition>
       <baseAddress>0x4000B000</baseAddress>   
       <interrupt>
         <name>SPI2</name>
@@ -127164,7 +127210,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>
     <peripheral derivedFrom="SPI1">
       <name>SPI3</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;SPI3EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->SPI3EN == 0</disableCondition>
       <baseAddress>0x4000C000</baseAddress>
 	  <interrupt>
         <name>SPI3</name>
@@ -127174,7 +127220,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>
     <peripheral derivedFrom="SPI1">
       <name>SPI4</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB2ENSETR-&gt;SPI4EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB2ENSETR->SPI4EN == 0</disableCondition>
       <baseAddress>0x44005000</baseAddress>
 	  <interrupt>
         <name>SPI4</name>
@@ -127184,7 +127230,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>
     <peripheral derivedFrom="SPI1">
       <name>SPI5</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB2ENSETR-&gt;SPI5EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB2ENSETR->SPI5EN == 0</disableCondition>
       <baseAddress>0x44009000</baseAddress>
 	  <interrupt>
         <name>SPI5</name>
@@ -127194,7 +127240,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>
     <peripheral derivedFrom="SPI1">
       <name>SPI6</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB5ENSETR-&gt;SPI6EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB5ENSETR->SPI6EN == 0</disableCondition>
       <baseAddress>0x5C001000</baseAddress>
 	  <interrupt>
         <name>SPI6</name>
@@ -127206,7 +127252,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>STGENC</name>
       <description>STGENC</description>
       <groupName>STGENC</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB5ENSETR-&gt;STGENEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB5ENSETR->STGENEN == 0</disableCondition>
       <baseAddress>0x5C008000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -127557,7 +127603,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>STGENR</name>
       <description>STGENR</description>
       <groupName>STGENR</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB4ENSETR-&gt;STGENROEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB4ENSETR->STGENROEN == 0</disableCondition>
       <baseAddress>0x5A005000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -127845,7 +127891,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>SYSCFG</name>
       <description>SYSCFG</description>
       <groupName>SYSCFG</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB3ENSETR-&gt;SYSCFGEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB3ENSETR->SYSCFGEN == 0</disableCondition>
       <baseAddress>0x50020000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -129784,7 +129830,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>TIM1</name>
       <description>TIM1</description>
       <groupName>TIM1</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB2ENSETR-&gt;TIM1EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB2ENSETR->TIM1EN == 0</disableCondition>
       <baseAddress>0x44000000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -131059,7 +131105,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>TIM2</name>
       <description>TIM2</description>
       <groupName>TIM2</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;TIM2EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->TIM2EN == 0</disableCondition>
       <baseAddress>0x40000000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -132220,7 +132266,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>TIM3</name>
       <description>TIM3</description>
       <groupName>TIM3</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;TIM3EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->TIM3EN == 0</disableCondition>
       <baseAddress>0x40001000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -133381,7 +133427,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>TIM4</name>
       <description>TIM4</description>
       <groupName>TIM4</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;TIM4EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->TIM4EN == 0</disableCondition>
       <baseAddress>0x40002000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -134542,7 +134588,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>TIM5</name>
       <description>TIM5</description>
       <groupName>TIM5</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;TIM5EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->TIM5EN == 0</disableCondition>
       <baseAddress>0x40003000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -135703,7 +135749,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>TIM6</name>
       <description>TIM6</description>
       <groupName>TIM6</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;TIM6EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->TIM6EN == 0</disableCondition>
       <baseAddress>0x40004000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -136864,7 +136910,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>TIM7</name>
       <description>TIM7</description>
       <groupName>TIM7</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;TIM7EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->TIM7EN == 0</disableCondition>
       <baseAddress>0x40005000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -138025,7 +138071,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>TIM8</name>
       <description>TIM8</description>
       <groupName>TIM8</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB2ENSETR-&gt;TIM8EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB2ENSETR->TIM8EN == 0</disableCondition>
       <baseAddress>0x44001000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -139300,7 +139346,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>TIM12</name>
       <description>TIM12</description>
       <groupName>TIM12</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;TIM12EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->TIM12EN == 0</disableCondition>
       <baseAddress>0x40006000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -139840,7 +139886,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>TIM13</name>
       <description>TIM13</description>
       <groupName>TIM13</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;TIM13EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->TIM13EN == 0</disableCondition>
       <baseAddress>0x40007000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -140148,7 +140194,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>TIM14</name>
       <description>TIM14</description>
       <groupName>TIM14</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;TIM14EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->TIM14EN == 0</disableCondition>
       <baseAddress>0x40008000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -140456,7 +140502,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>TIM15</name>
       <description>TIM15</description>
       <groupName>TIMER</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB2ENSETR-&gt;TIM15EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB2ENSETR->TIM15EN == 0</disableCondition>
       <baseAddress>0x44006000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -141367,7 +141413,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>TIM16</name>
       <description>TIM16</description>
       <groupName>TIMER</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB2ENSETR-&gt;TIM16EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB2ENSETR->TIM16EN == 0</disableCondition>
       <baseAddress>0x44007000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -141942,7 +141988,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
     </peripheral>
     <peripheral derivedFrom="TIM16">
       <name>TIM17</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB2ENSETR-&gt;TIM17EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB2ENSETR->TIM17EN == 0</disableCondition>
       <baseAddress>0x44008000</baseAddress>
 	   <interrupt>
         <name>TIM17</name>
@@ -141954,7 +142000,7 @@ It is mandatory to write CEC_CFGR only when CECEN=0.</description>
       <name>TZC</name>
       <description>TZC</description>
       <groupName>TZC</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB5ENSETR-&gt;TZC1EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB5ENSETR->TZC1EN == 0</disableCondition>
       <baseAddress>0x5C006000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -143479,7 +143525,7 @@ Not used with 32bit address.</description>
       <name>USART1</name>
       <description>Universal synchronous asynchronous receiver       transmitter</description>
       <groupName>USART</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB5ENSETR-&gt;USART1EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB5ENSETR->USART1EN == 0</disableCondition>
       <baseAddress>0x5C000000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -144523,7 +144569,7 @@ Not used with 32bit address.</description>
     </peripheral>
     <peripheral derivedFrom="USART1">
       <name>USART2</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;USART2EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->USART2EN == 0</disableCondition>
       <baseAddress>0x4000E000</baseAddress>
 	  <interrupt>
         <name>USART2</name>
@@ -144533,7 +144579,7 @@ Not used with 32bit address.</description>
     </peripheral>
     <peripheral derivedFrom="USART1">
       <name>USART3</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;USART3EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->USART3EN == 0</disableCondition>
       <baseAddress>0x4000F000</baseAddress>
 	  <interrupt>
         <name>USART3</name>
@@ -144543,7 +144589,7 @@ Not used with 32bit address.</description>
     </peripheral>
     <peripheral derivedFrom="USART1">
       <name>USART4</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;UART4EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->UART4EN == 0</disableCondition>
       <baseAddress>0x40010000</baseAddress>
 	  <interrupt>
         <name>USART4</name>
@@ -144553,7 +144599,7 @@ Not used with 32bit address.</description>
     </peripheral>
     <peripheral derivedFrom="USART1">
       <name>USART5</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;UART5EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->UART5EN == 0</disableCondition>
       <baseAddress>0x40011000</baseAddress>
 	  <interrupt>
         <name>USART5</name>
@@ -144563,7 +144609,7 @@ Not used with 32bit address.</description>
     </peripheral>
     <peripheral derivedFrom="USART1">
       <name>USART6</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;USART6EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB2ENSETR->USART6EN == 0</disableCondition>
       <baseAddress>0x44003000</baseAddress>
 	  <interrupt>
         <name>USART6</name>
@@ -144573,7 +144619,7 @@ Not used with 32bit address.</description>
     </peripheral>
     <peripheral derivedFrom="USART1">
       <name>USART7</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;UART7EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->UART7EN == 0</disableCondition>
       <baseAddress>0x40018000</baseAddress>
 	  <interrupt>
         <name>USART7</name>
@@ -144583,7 +144629,7 @@ Not used with 32bit address.</description>
     </peripheral>
     <peripheral derivedFrom="USART1">
       <name>USART8</name>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;UART8EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->UART8EN == 0</disableCondition>
       <baseAddress>0x40019000</baseAddress>
 	  <interrupt>
         <name>USART8</name>
@@ -144595,7 +144641,7 @@ Not used with 32bit address.</description>
       <name>USBPHYC</name>
       <description>USBPHYC</description>
       <groupName>USBPHYC</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB4ENSETR-&gt;USBPHYEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB4ENSETR->USBPHYEN == 0</disableCondition>
       <baseAddress>0x5A006000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -144958,7 +145004,7 @@ Not used with 32bit address.</description>
       <name>VREFBUF</name>
       <description>VREFBUF</description>
       <groupName>VREFBUF</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB3ENSETR-&gt;VREFEN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB3ENSETR->VREFEN == 0</disableCondition>
       <baseAddress>0x50025000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -145027,7 +145073,7 @@ Not used with 32bit address.</description>
       <name>WWDG1</name>
       <description>WWDG1</description>
       <groupName>WWDG1</groupName>
-	  <disableCondition>RCC-&gt;RCC_MC_APB1ENSETR-&gt;WWDG1EN == 0</disableCondition>
+	  <disableCondition>RCC->RCC_MC_APB1ENSETR->WWDG1EN == 0</disableCondition>
       <baseAddress>0x4000A000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>

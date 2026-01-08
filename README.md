@@ -4,6 +4,20 @@ This repository contains SVD files for most STM32 chips, generated from the [stm
 
 These files are not intended to be modified. Instead, they are intended to be used as any SVD file, for example to generate access to registers for various languages.
 
+## Installation Requirements
+
+SVD tooling is required. You will need to do something like this:
+
+- **Python 3.6+** with pip
+- **svdtools**: Install with `pip install svdtools`
+- **Git** with submodule support
+
+The `svd` command from svdtools must be available in your PATH. If installed via pip with `--user`, ensure `~/.local/bin` is in your PATH:
+
+```bash
+export PATH="$HOME/.local/bin:$PATH"
+```
+
 ## Contributing
 
 Please do not contribute changes directly to the SVD files in this repository. Instead, contribute patches upstream in the [stm32-rs](https://github.com/stm32-rs/stm32-rs) repository.
